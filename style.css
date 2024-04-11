@@ -31,6 +31,16 @@ body,html{
     background-image: linear-gradient(to right, #ffffff 0%, #ffffff 50%, #edeff3 50%, #c2e9fb 100%);
     border-radius: 15px;
 }
+
+/* responsibe */
+
+@media  (max-width:790px) {
+    .std-RegSec{
+        background-image: linear-gradient(to right, #ffffff 0%, #ffffff 50%, #ffffff 0%, #ffffff 0%);
+
+    }
+}
+
 .Registration-From{
     
     display: flex;
