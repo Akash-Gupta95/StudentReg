@@ -211,5 +211,33 @@ table {
   }
 
 
+  /* Registration-From Section */
+.std-RegSec{
+  width: 100%;
+  height: 100vh;
+  background-color: #397bad;
+  }
+  .std-regContainer{
+
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 25px 35px;
+
+    box-shadow: 2px 2px 12px black;
+  }
+  
+  
+  
+  .Registration-From{  
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+.Display{
+  margin-top: 8rem;
+}
+
   
 }
