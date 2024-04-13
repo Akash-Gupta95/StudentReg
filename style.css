@@ -143,7 +143,10 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-  background-color: #eaeaea;
+  background-color: lightgreen;
+}
+tr{
+ background-color:#eaeaea;
 }
 
 button {
@@ -178,8 +181,13 @@ button:hover {
 .Display {
   position: relative;
   top: 8rem;
+
 }
 
+.Display-con{
+  background-image: radial-gradient( circle 311px at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );
+  border-radius: 5px;
+}
 /* Responsibe Desing */
 
 @media (max-width: 790px) {
