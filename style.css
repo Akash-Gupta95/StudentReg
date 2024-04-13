@@ -1,243 +1,199 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-
-}
 .roboto-medium {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-body,html{
-    overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    font-family: sans-serif;
-   
+body,
+html {
+  overflow-x: hidden;
+
+  font-family: sans-serif;
 }
 
 /* Registration-From Section */
-.std-RegSec{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 100vh;
-background-color: #397bad;
-}
-.std-regContainer{
-  width: 80%;
-  background-color: white;
-  overflow: hidden;
-  border-radius: 5px;
-  padding: 15px;
-  box-shadow: 2px 2px 12px black;
-}
-
-
-
-.Registration-From{  
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.Registration-From h2 , .Display h1{
-  font-family: "Roboto", sans-serif;
-}
-
-.formImage img{
-    width: 400px;
-}
-label{
-    font-size: 1rem;
-    text-transform: uppercase;
-    position: relative;
-    top: 10px;
-    font-weight: 540;
-   
-
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 3px; 
-
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #000; 
-    color: #000 !important;
-    margin:5px 15px;
-    background-color: white !important;
-  }
-  
-  input[type="text"]:focus {
-    background-color: #171515;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
-    width: 100%;
-  }
-
-  input{
-    background-color: #413c3c;
-    color: white;
-    width:60%;
-    border-radius: 1px;
-   
-  }
-
-
-.Registration-From button{
-    margin-top: 35px;
-    width: 100%;
-    padding:5px;
-    border-radius: 5px;
-    margin:35px 15px;
-}
-
-.displayDetails{
-   height: 70vh;
-}
-.details{
-    width: 100%;
-    height: 90%; /* Example fixed height */
-    overflow-y: scroll;
-}
-.hr-line{
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.hr-line div{
-width: 100px;
-border-bottom: 3.2px solid orange;
-position: relative;
-bottom: 45px;
-
-}
-
-
-table {
-    width: 100%; 
-    border-collapse: collapse; 
-  }
-  
-  th, td {
-    border: 1px solid #ddd; 
-    padding: 8px; 
-    text-align: left; 
-  }
-  
-  th {
-    background-color: #f2f2f2; /* Light grey background for headers */
-    color: #333; /* Darker text for headers */
-
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9; /* Zebra striping for rows */
-  }
-  
-  tr:hover {
-    background-color: #eaeaea; /* Highlight row on hover */
-  }
-  
- 
-  button {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding inside button */
-    margin: 4px 2px; 
-   
-  }
-  button:hover{
-    box-shadow: 8px 8px 18px rgb(187, 184, 184);
-  }
-
-  .editBtn , .delBtn{
-    background-color: rgb(87, 115, 30);
-    border-radius: 2px 15px;
-    padding: 2px 15px;
-  }
-
-  .delBtn{
-    background-color: rgb(140, 29, 29);
-  }
-
-  /* Responsibe Desing */
-
-
-@media  (max-width:790px) {
-  .std-RegSec{
-      background-image: linear-gradient(to right, #ffffff 0%, #ffffff 50%, #ffffff 0%, #ffffff 0%);
-
-  }
-  table{
-    
-  }
-
-  th, td {
-    border: 1px solid #ddd; 
-    padding: 5px 2px; 
-    text-align: left;
-  
-  }
-  
-  th {
-    background-color: #efe3e3; /* Light grey background for headers */
-    color: #333; /* Darker text for headers */
-
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9; /* Zebra striping for rows */
-   
-  }
-  
-  tr:hover {
-    background-color: #eaeaea; /* Highlight row on hover */
-  }
-  
- 
-  button {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding inside button */
-    margin: 4px 2px; 
-   
-  }
-
-
-  /* Registration-From Section */
-.std-RegSec{
+.std-RegSec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
   background-color: #397bad;
-  }
-  .std-regContainer{
+}
+.std-regContainer {
+  width: 80%;
+  background-color: white;
+  overflow: hidden;
 
-    width: 100%;
-    background-color: white;
-    overflow: hidden;
-    border-radius: 5px;
-    padding: 25px 35px;
-
-    box-shadow: 2px 2px 12px black;
-  }
-  
-  
-  
-  .Registration-From{  
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-  }
-.Display{
-  margin-top: 8rem;
+  border-radius: 5px;
+  padding: 15px;
+  position: relative;
+  top: 4rem;
+  box-shadow: 2px 2px 12px black;
 }
 
-  
+.Registration-From {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Registration-From h2,
+.Display h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+.formImage img {
+  width: 400px;
+}
+
+/* Form Input  */
+label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  top: 10px;
+  font-weight: 540;
+}
+
+input[type="text"],
+[type="email"],
+[type="number"] {
+  width: 100%;
+  padding: 3px;
+
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #000;
+  color: #000 !important;
+  margin: 5px 15px;
+  background-color: white !important;
+}
+
+input[type="text"]:focus {
+  background-color: #171515;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+input {
+  background-color: #413c3c;
+  color: white;
+  width: 60%;
+  border-radius: 1px;
+}
+
+.Registration-From button {
+  margin-top: 35px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 35px 15px;
+}
+
+/* Student Detais display */
+
+.displayDetails {
+  height: 70vh;
+}
+.details {
+  width: 100%;
+  height: 90%;
+  overflow-y: scroll;
+}
+.hr-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hr-line div {
+  width: 100px;
+  border-bottom: 3.2px solid orange;
+  position: relative;
+  bottom: 45px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333; 
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #eaeaea;
+}
+
+button {
+  background-color: #4caf50; 
+  color: white;
+  padding: 10px 20px; 
+  margin: 4px 2px;
+}
+button:hover {
+  box-shadow: 8px 8px 18px rgb(187, 184, 184);
+}
+
+.editBtn,
+.delBtn {
+  background-color: rgb(87, 115, 30);
+  border-radius: 2px 15px;
+  padding: 2px 15px;
+}
+.editBtn:hover {
+  background-color: green;
+  box-shadow: 5px 8px 8px black;
+}
+
+.delBtn {
+  background-color: rgb(140, 29, 29);
+}
+.delBtn:hover {
+  background-color: red;
+  box-shadow: 5px 8px 8px black;
+}
+
+.Display {
+  position: relative;
+  top: 5rem;
+}
+
+/* Responsibe Desing */
+
+@media (max-width: 790px) {
+  .std-RegSec {
+    background-color: white;
+  }
+  .std-regContainer {
+    width: 100%;
+  }
+
+  .std-RegSec {
+    margin-top: 12rem;
+  }
+  .Display {
+    margin-top: 14rem;
+  }
 }

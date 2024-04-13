@@ -1,53 +1,51 @@
 const inputField = document.getElementsByTagName("input");
-const SaveBtn = document.querySelector("#saveBtn");
+const registerBtn = document.querySelector("#registerBtn");
 const showDetails = document.querySelector(".details");
 
 // Student Details Array
 const studentDetails = [
   {
-    studentName: "Student1",
-    studentId: "ab125",
+    studentName: "John Doe",
+    studentId: "14345",
     stuentClass: "12th",
-    roll: 365,
-    address: "Delhi",
+    roll: 36,
+    address: "America",
     contact: "8434381886",
+    email:"jhon@gmail.com"
   },
+  {
+    studentName: "Alex",
+    studentId: "12345",
+    stuentClass: "12th",
+    roll: 38,
+    address: "Paris",
+    contact: "8434381886",
+    email:"alex@gmail.com"
+  },
+  {
+    studentName: "Alen",
+    studentId: "198545",
+    stuentClass: "12th",
+    roll: 88,
+    address: "Amestradem",
+    contact: "8434381886",
+    email:"alenx@gmail.com"
+  },
+ 
 
-  {
-    studentName: "Student2",
-    studentId: "ab126",
-    stuentClass: "11th",
-    roll: 3222,
-    address: "Delhi",
-    contact: "8434381887",
-  },
-  {
-    studentName: "Student2",
-    studentId: "ab126",
-    stuentClass: "11th",
-    roll: 3222,
-    address: "Delhi",
-    contact: "8434381887",
-  },
-  {
-    studentName: "Student2",
-    studentId: "ab126",
-    stuentClass: "11th",
-    roll: 3222,
-    address: "Delhi",
-    contact: "8434381887",
-  },
 
 ];
 
-SaveBtn.addEventListener("click", () => {
-  // details Selections
+registerBtn.addEventListener("click", () => {
+
+  // Taking Value from register form inputs
   const studentName = inputField[0].value;
   const studentId = inputField[1].value;
   const stuentClass = inputField[2].value;
   const roll = inputField[3].value;
   const address = inputField[4].value;
   const contact = inputField[5].value;
+  const  email = inputField[6].value;
 
   // Validation
 
@@ -69,44 +67,68 @@ SaveBtn.addEventListener("click", () => {
     return;
   }
   if (!address) {
-    alert("Enter Your Roll");
+    alert("Enter Your address");
     return;
   }
   if (!contact) {
-    alert("Enter Your Roll");
+    alert("Enter Your contact");
+    return;
+  }
+  if (!email) {
+    alert("Enter Your email");
     return;
   }
 
   
-
+//  Object form Every new students
   const obj = {
     studentName,
     studentId,
     stuentClass,
     roll,
     address,
-    contact
+    contact,
+    email
   };
 
-  // For clear data
-  inputField[0].value = ""
-  inputField[1].value = ""
-  inputField[2].value = ""
-  inputField[3].value = ""
-  inputField[4].value = ""
-  inputField[5].value = ""
-
   studentDetails.push(obj);
-  dd();
+
+  clearInputField();
+
+  // Render Updated Data
+  displayData();
 });
 
-// delete Row
-const deleteRow = (index) => {
-  const newAr = studentDetails.splice(index, 1);
-  dd();
+
+// For clear input fields after register
+const clearInputField = ()=>{
+inputField[0].value = ""
+inputField[1].value = ""
+inputField[2].value = ""
+inputField[3].value = ""
+inputField[4].value = ""
+inputField[5].value = ""
+inputField[6].value = ""
 };
 
-const dd = () => {
+
+// Reset Button
+const resetBtn = document.querySelector("#resetBtn");
+resetBtn.addEventListener('click',()=>{clearInputField();})
+
+
+
+// delete Row from student details
+const deleteRow = (index) => {
+  const newAr = studentDetails.splice(index, 1);
+
+  // Render Updated Data
+  displayData();
+};
+
+
+
+const displayData = () => {
 
   const Data = studentDetails;
 
@@ -140,6 +162,13 @@ const dd = () => {
         details.contact
       } ></td>
 
+      <td style="display:${bool != index ? 1 : "none"}" >${
+        details.email
+      } </td>
+        <td style=" display:${bool != index ? "none" : 1}"><input id=input${index + 170} value=${
+        details.email
+      } ></td>
+
         <td><button Class="editBtn"  onclick="editRow(${index})">${
         bool != index ? "Edit" : "Save"
       }</button></td>
@@ -158,6 +187,7 @@ const dd = () => {
           <th>Roll</th>
           <th>Address</th>
           <th>Contact</th>
+          <th>Email</th>
           <th>Edit</th>
           <th>Delete</th>
         </tr>
@@ -183,7 +213,9 @@ function editRow(index) {
     bool = null;
     saveEdit(index);
   }
-  dd();
+
+  // Render Updated Data
+  displayData();
 }
 
 //   saveEdit();
@@ -195,16 +227,18 @@ let saveEdit = (index) => {
   const studentRoll = document.querySelector(`#input${index + 140}`).value;
   const stuentAddre = document.querySelector(`#input${index + 150}`).value;
   const studentContact = document.querySelector(`#input${index + 160}`).value;
+  const stuentEmail = document.querySelector(`#input${index + 170}`).value;
 
   newObj.studentName = studname;
   newObj.studentId = studentId;
   newObj.stuentClass = studClass;
   newObj.roll = studentRoll;
   newObj.address = stuentAddre;
+  newObj.email = stuentEmail;
   newObj.contact = studentContact;
 };
 
 
 
 
-dd();
+displayData();

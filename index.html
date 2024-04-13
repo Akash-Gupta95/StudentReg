@@ -12,11 +12,15 @@
 </head>
 <body>
 
+    <!-- Main container for registration section -->
     <div class="container-fluid std-RegSec">
         <div class="row std-regContainer ">
+
+            <!-- Column for displaying an image on the left side -->
             <div class="col-md-6 mt-5 formImage d-flex justify-content-center align-items-center">
                 <img src="https://img.freepik.com/free-photo/view-3d-practicing-lawyer_23-2151023410.jpg?t=st=1712808287~exp=1712811887~hmac=ae63126bcdc2ea313758c3c59899237cb6e1be5c06cf4f562442b3f0fc4510a1&w=740" alt="">
             </div>
+            <!-- Column for registration form -->
             <div class="col-md-6 RegCol ">
                 <section class="Registration-From ">
                     <h2 class="text-center mb-5 mt-3">Register Form</h2>
@@ -34,10 +38,20 @@
                         <input type="text" id="roll">
                         <label for="address">Address:</label>
                         <input type="text" id="address">
+                        
                         <label for="contact">Contact:</label>
-                        <input type="text" id="contact">
+                        <input type="number" id="contact">
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email">
                     </form>
-                    <button id="saveBtn" type="submit">Register</button>
+                    <!-- Buttons for form operations -->
+                    <div class="row">
+                        <div class="col col-4"><button id="resetBtn" class="bg-warning text-black" type="submit">Reset</button></div>
+                        <div class="col col-8"><button id="registerBtn" type="submit">Register</button></div>
+                    </div>
+                    
+                    
                 </section>
             </div>
         </div>
@@ -45,6 +59,7 @@
    
 </div>
 
+<!-- Section to display registered student details -->
     <section class="Display">
         <h1 class="regHeading text-center mt-5">Student Details </h1><br><br>
         <div class="hr-line "><div></div></div>
@@ -52,6 +67,7 @@
         <div class="row">
             <div class="col-md-12 mt-5 displayDetails">
                 <div class="details ">
+                     <!-- Details will be dynamically filled -->
                 </div>
             </div>
         </div>
